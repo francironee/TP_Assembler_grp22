@@ -1,3 +1,7 @@
-tasm %1
-tasm %2
-tlink %1 %2
+tasm int77
+tlink /t int77.obj
+int77
+tasm maintp
+tasm libtp
+tlink maintp libtp
+maintp.exe
